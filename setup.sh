@@ -9,6 +9,9 @@ echo "🚀 Claude Code Framework Setup"
 echo "================================"
 echo ""
 
+# Get source directory (if invoked from elsewhere)
+SOURCE_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+
 # Get target directory
 if [ -z "$1" ]; then
     read -p "Enter the path to your repository: " TARGET_DIR
@@ -82,7 +85,7 @@ echo "📝 Copying framework files..."
 
 # Copy commands - handle update vs skip mode
 echo "  Installing commands..."
-for cmd_file in .claude/commands/*.md; do
+for cmd_file in $SOURCE_DIR/.claude/commands/*.md; do
     filename=$(basename "$cmd_file")
     if [ -f "$TARGET_DIR/.claude/commands/$filename" ]; then
         if [ "$UPDATE_MODE" = "true" ]; then
@@ -100,7 +103,7 @@ done
 
 # Copy agents - handle update vs skip mode
 echo "  Installing agents..."
-for agent_file in .claude/agents/*.md; do
+for agent_file in $SOURCE_DIR/.claude/agents/*.md; do
     filename=$(basename "$agent_file")
     if [ -f "$TARGET_DIR/.claude/agents/$filename" ]; then
         if [ "$UPDATE_MODE" = "true" ]; then
@@ -121,13 +124,13 @@ if [ -f "$TARGET_DIR/PLAYBOOK.md" ]; then
     echo ""
     read -p "PLAYBOOK.md already exists. Update it? (y/N): " UPDATE_PLAYBOOK
     if [ "$UPDATE_PLAYBOOK" = "y" ] || [ "$UPDATE_PLAYBOOK" = "Y" ]; then
-        cp PLAYBOOK.md "$TARGET_DIR/"
+        cp $SOURCE_DIR/PLAYBOOK.md "$TARGET_DIR/"
         echo "✅ Updated PLAYBOOK.md"
     else
         echo "ℹ️  Kept existing PLAYBOOK.md"
     fi
 else
-    cp PLAYBOOK.md "$TARGET_DIR/"
+    cp $SOURCE_DIR/PLAYBOOK.md "$TARGET_DIR/"
     echo "✅ Installed PLAYBOOK.md"
 fi
 
