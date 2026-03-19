@@ -1,4 +1,9 @@
-# Save Progress
+---
+name: 5_save_progress
+description: Save work session state for continuity. Use when pausing work mid-task or switching contexts.
+disable-model-invocation: true
+---
+
 
 You are tasked with creating a comprehensive progress checkpoint when the user needs to pause work on a feature.
 

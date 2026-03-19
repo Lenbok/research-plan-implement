@@ -1,4 +1,9 @@
-# Implement Plan
+---
+name: 4_implement_plan
+description: Execute implementation plan systematically, phase by phase. Use when ready to implement an approved plan.
+argument-hint: [plan-path]
+---
+
 
 You are tasked with implementing an approved technical plan from `thoughts/shared/plans/`. These plans contain phases with specific changes and success criteria.
 

@@ -32,17 +32,24 @@ The Research-Plan-Implement Framework is a structured approach to AI-assisted so
 
 ### Installation
 
-1. **Copy framework files to your repository:**
+1. **Run the setup script:**
 ```bash
-# From the .claude-framework-adoption directory
-cp -r .claude your-repo/
-cp -r thoughts your-repo/
+# For Claude Code (default)
+./setup.sh /path/to/your/repo
+
+# For Cursor (uses .claude/ for compatibility with Claude Code)
+./setup.sh --cursor /path/to/your/repo
+
+# For OpenCode
+./setup.sh --opencode /path/to/your/repo
 ```
 
+**Note**: Cursor natively supports `.claude/` directories for agent and command files, so both Claude Code and Cursor can work in the same repository when using the `--cursor` flag.
+
 2. **Customize for your project:**
-- Edit `.claude/commands/*.md` to match your tooling
+- Edit skill files to match your tooling
 - Update agent descriptions if needed
-- Add project-specific CLAUDE.md
+- Add project-specific configuration (CLAUDE.md, CURSOR.md, or OPENCODE.md)
 
 3. **Test the workflow:**
 
@@ -73,19 +80,19 @@ cp -r thoughts your-repo/
 ```
 your-repo/
 ├── .claude/                      # AI Assistant Configuration
-│   ├── agents/                   # Specialized AI agents
-│   │   ├── codebase-locator.md   # Finds relevant files
-│   │   ├── codebase-analyzer.md  # Analyzes implementation
-│   │   └── codebase-pattern-finder.md # Finds patterns to follow
-│   └── commands/                 # Numbered workflow commands
-│       ├── 1_research_codebase.md
-│       ├── 2_create_plan.md
-│       ├── 3_validate_plan.md
-│       ├── 4_implement_plan.md
-│       ├── 5_save_progress.md   # Save work session
-│       ├── 6_resume_work.md     # Resume saved work
-│       ├── 7_research_cloud.md  # Cloud infrastructure analysis
-│       └── 8_define_test_cases.md # Design acceptance test cases
+│   ├── agents/                   # (.claude/ for Claude Code & Cursor,
+│   │   ├── codebase-locator.md   #  .opencode/ for OpenCode)
+│   │   ├── codebase-analyzer.md
+│   │   └── codebase-pattern-finder.md
+│   └── skills/                   # Numbered workflow skills
+│       ├── 1_research_codebase/SKILL.md
+│       ├── 2_create_plan/SKILL.md
+│       ├── 3_validate_plan/SKILL.md
+│       ├── 4_implement_plan/SKILL.md
+│       ├── 5_save_progress/SKILL.md
+│       ├── 6_resume_work/SKILL.md
+│       ├── 7_research_cloud/SKILL.md
+│       └── 8_define_test_cases/SKILL.md
 ├── thoughts/                     # Persistent Context Storage
 │   └── shared/
 │       ├── research/            # Research findings
@@ -96,7 +103,9 @@ your-repo/
 │       │   └── YYYY-MM-DD_*.md
 │       └── cloud/               # Cloud infrastructure analyses
 │           └── platform_*.md
-└── CLAUDE.md                    # Project-specific instructions
+├── CLAUDE.md                     # Project-specific instructions for Claude
+├── CURSOR.md                     # Project-specific instructions for Cursor
+└── OPENCODE.md                   # Project-specific instructions for OpenCode
 ```
 
 ## Workflow Phases
@@ -454,9 +463,9 @@ tools: Read, Grep
 You are a security specialist...
 ```
 
-### Project-Specific CLAUDE.md
+### Project-Specific Configuration
 
-Add instructions for your project:
+Add instructions for your project in your configuration file (CLAUDE.md, CURSOR.md, or OPENCODE.md):
 
 ```markdown
 # Project Conventions

@@ -1,4 +1,9 @@
-# Research Cloud Infrastructure
+---
+name: 7_research_cloud
+description: Analyze cloud infrastructure using READ-ONLY CLI operations (Azure/AWS/GCP). Use when investigating cloud deployments, costs, or security.
+disable-model-invocation: true
+---
+
 
 You are tasked with conducting comprehensive READ-ONLY analysis of cloud deployments and infrastructure using cloud-specific CLI tools (az, aws, gcloud, etc.).
 

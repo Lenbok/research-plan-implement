@@ -1,4 +1,8 @@
-# Research Codebase
+---
+name: 1_research_codebase
+description: Deep codebase exploration with parallel AI agents. Use when investigating how code works, understanding architecture, or answering questions about the codebase.
+---
+
 
 You are tasked with conducting comprehensive research across the codebase to answer user questions by spawning parallel sub-agents and synthesizing their findings.
 

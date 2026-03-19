@@ -1,4 +1,8 @@
-# Define Test Cases Command
+---
+name: 8_define_test_cases
+description: Design acceptance test cases using DSL approach with comment-first structure. Use before implementing features to define test scenarios.
+---
+
 
 You are helping define automated acceptance test cases using a Domain Specific Language (DSL) approach.
 

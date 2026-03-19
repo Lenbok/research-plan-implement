@@ -1,4 +1,10 @@
-# Resume Work
+---
+name: 6_resume_work
+description: Resume from a previously saved session. Use when continuing work after a break or context switch.
+argument-hint: [session-path]
+disable-model-invocation: true
+---
+
 
 You are tasked with resuming previously saved work by restoring full context and continuing implementation.
 

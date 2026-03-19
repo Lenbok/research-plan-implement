@@ -37,8 +37,8 @@ claude-research-plan-implement/
 │   │   ├── codebase-locator.md   # Finds relevant files efficiently
 │   │   ├── codebase-analyzer.md  # Analyzes code implementation details
 │   │   └── codebase-pattern-finder.md # Identifies patterns to follow
-│   ├── commands/                 # Numbered workflow command definitions
-│   │   └── [1-6]_*.md           # Each phase of the workflow
+│   ├── skills/                   # Numbered workflow skill definitions
+│   │   └── [1-8]_*/SKILL.md     # Each phase of the workflow
 │   └── settings.local.json      # Permission settings (allows find/ls)
 ├── thoughts/                     # Persistent context storage structure
 │   └── shared/
@@ -56,15 +56,15 @@ claude-research-plan-implement/
 
 2. **Persistent Context Storage**: All research findings, plans, and session summaries are stored as markdown files in the `thoughts/` directory, building a knowledge base over time that persists across Claude sessions.
 
-3. **Phased Workflow**: The numbered commands enforce a structured approach: Research → Plan → Implement → Validate → Save/Resume. Each phase builds on the previous ones.
+3. **Phased Workflow**: The numbered skills enforce a structured approach: Research → Plan → Implement → Validate → Save/Resume. Each phase builds on the previous ones.
 
-4. **Framework Agnostic**: The setup.sh script customizes the framework for JavaScript, Python, Go, or other projects, generating appropriate CLAUDE.md templates and command customizations.
+4. **Multi-Platform Support**: The setup.sh script supports Claude Code, Cursor, and OpenCode, with automatic file transformation for platform-specific requirements.
 
-5. **Session Management**: Commands 5 and 6 allow saving and resuming work state, enabling long-running tasks to span multiple Claude sessions.
+5. **Session Management**: Skills 5 and 6 allow saving and resuming work state, enabling long-running tasks to span multiple sessions.
 
 ### Integration Points
 
-- **Command System**: Each `.claude/commands/*.md` file defines a slash command that modifies Claude's behavior for that specific workflow phase
+- **Skill System**: Each `.claude/skills/*/SKILL.md` file defines a workflow skill that can be invoked with `/skill-name`
 - **Agent Definitions**: The `.claude/agents/*.md` files define specialized sub-agents with focused capabilities
 - **Settings**: The `settings.local.json` enables specific bash commands (find, ls) needed by the framework
 - **Documentation Templates**: The framework creates template files for research findings and plans to ensure consistency
@@ -72,7 +72,7 @@ claude-research-plan-implement/
 ### Usage in Target Repositories
 
 When this framework is installed in a target repository:
-1. Developers invoke numbered commands to progress through the workflow
+1. Developers invoke numbered skills to progress through the workflow
 2. Research findings accumulate in `thoughts/shared/research/`
 3. Implementation plans are saved to `thoughts/shared/plans/`
 4. The framework guides systematic, well-documented development

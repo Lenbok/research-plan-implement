@@ -1,4 +1,9 @@
-# Validate Plan
+---
+name: 3_validate_plan
+description: Verify implementation matches plan's success criteria. Use after completing implementation to validate all requirements are met.
+disable-model-invocation: true
+---
+
 
 You are tasked with validating that an implementation plan was correctly executed, verifying all success criteria and identifying any deviations or issues.
 

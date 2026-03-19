@@ -1,37 +1,42 @@
-# Claude Code Research-Plan-Implement Framework
+# Research-Plan-Implement Framework
 
 A structured workflow framework for AI-assisted software development that emphasizes thorough research, detailed planning, and systematic implementation.
+
+**Supported AI Assistants**: Claude Code, Cursor, OpenCode
 
 ## 🚀 Quick Start
 
 ```bash
-# Run the setup script
+# For Claude Code (default)
 ./setup.sh /path/to/your/repo
 
-# Or manually copy files
-cp -r .claude /path/to/your/repo/
-cp -r thoughts /path/to/your/repo/
-cp PLAYBOOK.md /path/to/your/repo/
+# For Cursor (uses .claude/ for compatibility)
+./setup.sh --cursor /path/to/your/repo
+
+# For OpenCode (uses .claude/ for compatibility)
+./setup.sh --opencode /path/to/your/repo
 ```
+
+**Note**: Both Cursor and OpenCode have native support for `.claude/` directories (using the Agent Skills standard), so all three tools can work in the same repository with a single `.claude/` directory.
 
 ## 📁 What's Included
 
 ```
-.claude-framework-adoption/
-├── .claude/
-│   ├── agents/                  # AI agent definitions
-│   │   ├── codebase-locator.md  # Finds relevant files
-│   │   ├── codebase-analyzer.md # Analyzes how code works
-│   │   └── codebase-pattern-finder.md # Finds patterns to follow
-│   └── commands/                # Numbered workflow commands
-│       ├── 1_research_codebase.md
-│       ├── 2_create_plan.md
-│       ├── 3_validate_plan.md
-│       ├── 4_implement_plan.md
-│       ├── 5_save_progress.md
-│       ├── 6_resume_work.md
-│       ├── 7_research_cloud.md
-│       └── 8_define_test_cases.md
+research-plan-implement/
+├── .claude/                     # Agent configuration directory
+│   ├── agents/                  # (.claude/ for Claude Code and Cursor,
+│   │   ├── codebase-locator.md  #  .opencode/ for OpenCode)
+│   │   ├── codebase-analyzer.md
+│   │   └── codebase-pattern-finder.md
+│   └── skills/                  # Numbered workflow skills
+│       ├── 1_research_codebase/SKILL.md
+│       ├── 2_create_plan/SKILL.md
+│       ├── 3_validate_plan/SKILL.md
+│       ├── 4_implement_plan/SKILL.md
+│       ├── 5_save_progress/SKILL.md
+│       ├── 6_resume_work/SKILL.md
+│       ├── 7_research_cloud/SKILL.md
+│       └── 8_define_test_cases/SKILL.md
 ├── thoughts/                    # Context storage structure
 │   └── shared/
 │       ├── research/
@@ -40,6 +45,7 @@ cp PLAYBOOK.md /path/to/your/repo/
 │       └── cloud/
 ├── PLAYBOOK.md                  # Comprehensive documentation
 ├── setup.sh                     # Automated setup script
+├── transform-files.py           # File transformation script
 └── README.md                    # This file
 ```
 
@@ -98,7 +104,7 @@ The framework follows a structured workflow:
 ## 📖 Documentation
 
 - **[PLAYBOOK.md](PLAYBOOK.md)** - Complete guide with examples and best practices
-- **Command Files** - Each command file contains detailed instructions for that phase
+- **Skill Files** - Each skill file contains detailed instructions for that workflow phase
 - **Agent Files** - Define specialized AI agents for specific tasks
 
 ## 🎯 Key Benefits
@@ -113,10 +119,10 @@ The framework follows a structured workflow:
 
 After installation, customize for your project:
 
-1. **Edit command files** to match your tooling (test commands, linting, etc.)
-2. **Update CLAUDE.md** with project-specific conventions
+1. **Edit skill files** to match your tooling (test commands, linting, etc.)
+2. **Update configuration file** (CLAUDE.md, CURSOR.md, or OPENCODE.md) with project-specific conventions
 3. **Modify agent tools** if needed
-4. **Adjust directory paths** in commands
+4. **Adjust directory paths** in skills
 
 ## 💡 Typical Workflow Example
 

@@ -1,4 +1,8 @@
-# Create Implementation Plan
+---
+name: 2_create_plan
+description: Create detailed, phased implementation plans. Use when planning new features, major changes, or complex implementations.
+---
+
 
 You are tasked with creating detailed implementation plans through an interactive, iterative process. You should be skeptical, thorough, and work collaboratively with the user to produce high-quality technical specifications.
 
