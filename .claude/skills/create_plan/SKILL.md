@@ -1,5 +1,5 @@
 ---
-name: 2_create_plan
+name: create_plan
 description: Create detailed, phased implementation plans. Use when planning new features, major changes, or complex implementations.
 ---
 

@@ -20,12 +20,12 @@ cp PLAYBOOK.md /path/to/target/repo/
 ```
 
 ### Workflow Commands (in target repositories using this framework)
-1. `/1_research_codebase` - Deep codebase exploration with parallel AI agents
-2. `/2_create_plan` - Create detailed, phased implementation plans
-3. `/3_validate_plan` - Verify implementation matches plan
-4. `/4_implement_plan` - Execute plan systematically
-5. `/5_save_progress` - Save work session state
-6. `/6_resume_work` - Resume from saved session
+1. `/research_codebase` - Deep codebase exploration with parallel AI agents
+2. `/create_plan` - Create detailed, phased implementation plans
+3. `/validate_plan` - Verify implementation matches plan
+4. `/implement_plan` - Execute plan systematically
+5. `/save_progress` - Save work session state
+6. `/resume_work` - Resume from saved session
 
 ## High-Level Architecture
 

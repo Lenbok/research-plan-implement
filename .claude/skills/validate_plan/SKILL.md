@@ -1,5 +1,5 @@
 ---
-name: 3_validate_plan
+name: validate_plan
 description: Verify implementation matches plan's success criteria. Use after completing implementation to validate all requirements are met.
 disable-model-invocation: true
 ---

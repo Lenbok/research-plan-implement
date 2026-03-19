@@ -1,5 +1,5 @@
 ---
-name: 1_research_codebase
+name: research_codebase
 description: Deep codebase exploration with parallel AI agents. Use when investigating how code works, understanding architecture, or answering questions about the codebase.
 ---
 

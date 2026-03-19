@@ -1,5 +1,5 @@
 ---
-name: 6_resume_work
+name: resume_work
 description: Resume from a previously saved session. Use when continuing work after a break or context switch.
 argument-hint: [session-path]
 disable-model-invocation: true

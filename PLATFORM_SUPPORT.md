@@ -111,8 +111,8 @@ All platforms now use the same `.claude/` directory structure:
 │   ├── codebase-analyzer.md         (OpenCode: transformed to subagent format)
 │   └── codebase-pattern-finder.md   (OpenCode: transformed to subagent format)
 └── skills/
-    ├── 1_research_codebase/SKILL.md (Agent Skills standard - works on all platforms)
-    ├── 2_create_plan/SKILL.md       (Agent Skills standard - works on all platforms)
+    ├── research_codebase/SKILL.md (Agent Skills standard - works on all platforms)
+    ├── create_plan/SKILL.md       (Agent Skills standard - works on all platforms)
     └── ...
 ```
 

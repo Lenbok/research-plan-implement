@@ -1,5 +1,5 @@
 ---
-name: 4_implement_plan
+name: implement_plan
 description: Execute implementation plan systematically, phase by phase. Use when ready to implement an approved plan.
 argument-hint: [plan-path]
 ---

@@ -1,5 +1,5 @@
 ---
-name: 5_save_progress
+name: save_progress
 description: Save work session state for continuity. Use when pausing work mid-task or switching contexts.
 disable-model-invocation: true
 ---

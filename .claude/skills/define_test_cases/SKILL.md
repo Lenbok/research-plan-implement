@@ -1,5 +1,5 @@
 ---
-name: 8_define_test_cases
+name: define_test_cases
 description: Design acceptance test cases using DSL approach with comment-first structure. Use before implementing features to define test scenarios.
 ---
 

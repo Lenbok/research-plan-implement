@@ -55,23 +55,23 @@ The Research-Plan-Implement Framework is a structured approach to AI-assisted so
 
 **Standard Approach:**
 ```
-/1_research_codebase
+/research_codebase
 > How does user authentication work in this codebase?
 
-/2_create_plan
+/create_plan
 > I need to add two-factor authentication
 
-/4_implement_plan
+/implement_plan
 > thoughts/shared/plans/two_factor_auth.md
 ```
 
 **Test-Driven Approach:**
 ```
-/8_define_test_cases
+/define_test_cases
 > Two-factor authentication for user login
 
 # Design tests, then implement feature
-/4_implement_plan
+/implement_plan
 > Implement 2FA to make tests pass
 ```
 
@@ -85,14 +85,14 @@ your-repo/
 │   │   ├── codebase-analyzer.md
 │   │   └── codebase-pattern-finder.md
 │   └── skills/                   # Numbered workflow skills
-│       ├── 1_research_codebase/SKILL.md
-│       ├── 2_create_plan/SKILL.md
-│       ├── 3_validate_plan/SKILL.md
-│       ├── 4_implement_plan/SKILL.md
-│       ├── 5_save_progress/SKILL.md
-│       ├── 6_resume_work/SKILL.md
-│       ├── 7_research_cloud/SKILL.md
-│       └── 8_define_test_cases/SKILL.md
+│       ├── research_codebase/SKILL.md
+│       ├── create_plan/SKILL.md
+│       ├── validate_plan/SKILL.md
+│       ├── implement_plan/SKILL.md
+│       ├── save_progress/SKILL.md
+│       ├── resume_work/SKILL.md
+│       ├── research_cloud/SKILL.md
+│       └── define_test_cases/SKILL.md
 ├── thoughts/                     # Persistent Context Storage
 │   └── shared/
 │       ├── research/            # Research findings
@@ -110,7 +110,7 @@ your-repo/
 
 ## Workflow Phases
 
-### Phase 1: Research (`/1_research_codebase`)
+### Phase 1: Research (`/research_codebase`)
 
 **Purpose**: Comprehensive exploration and understanding
 
@@ -122,7 +122,7 @@ your-repo/
 
 **Example**:
 ```
-/1_research_codebase
+/research_codebase
 > How does the payment processing system work?
 ```
 
@@ -132,7 +132,7 @@ your-repo/
 - Patterns and conventions
 - Related components
 
-### Phase 2: Planning (`/2_create_plan`)
+### Phase 2: Planning (`/create_plan`)
 
 **Purpose**: Create detailed, phased implementation plan
 
@@ -144,7 +144,7 @@ your-repo/
 
 **Example**:
 ```
-/2_create_plan
+/create_plan
 > Add Stripe payment integration based on the research
 ```
 
@@ -169,7 +169,7 @@ your-repo/
 [...]
 ```
 
-### Phase 3: Implementation (`/4_implement_plan`)
+### Phase 3: Implementation (`/implement_plan`)
 
 **Purpose**: Execute plan systematically
 
@@ -181,7 +181,7 @@ your-repo/
 
 **Example**:
 ```
-/4_implement_plan
+/implement_plan
 > thoughts/shared/plans/stripe_integration.md
 ```
 
@@ -190,7 +190,7 @@ your-repo/
 - TodoWrite for task management
 - Communicates blockers clearly
 
-### Phase 4: Validation (`/3_validate_plan`)
+### Phase 4: Validation (`/validate_plan`)
 
 **Purpose**: Verify implementation matches plan
 
@@ -203,7 +203,7 @@ your-repo/
 
 **Example**:
 ```
-/3_validate_plan
+/validate_plan
 > Validate the Stripe integration implementation
 ```
 
@@ -213,7 +213,7 @@ your-repo/
 - Code review findings
 - Manual testing requirements
 
-### Test-Driven Development (`/8_define_test_cases`)
+### Test-Driven Development (`/define_test_cases`)
 
 **Purpose**: Design acceptance test cases before implementation
 
@@ -226,7 +226,7 @@ your-repo/
 
 **Example**:
 ```
-/8_define_test_cases
+/define_test_cases
 > Partner enrollment workflow when ordering kit products
 ```
 
@@ -268,24 +268,24 @@ your-repo/
 
 ### Core Workflow Commands
 
-### `/1_research_codebase`
+### `/research_codebase`
 - **Purpose**: Deep dive into codebase
 - **Input**: Research question
 - **Output**: Research document
 - **Agents Used**: All locator/analyzer agents
 
-### `/2_create_plan`
+### `/create_plan`
 - **Purpose**: Create implementation plan
 - **Input**: Requirements/ticket
 - **Output**: Phased plan document
 - **Interactive**: Yes
 
-### `/3_validate_plan`
+### `/validate_plan`
 - **Purpose**: Verify implementation
 - **Input**: Plan path (optional)
 - **Output**: Validation report
 
-### `/4_implement_plan`
+### `/implement_plan`
 - **Purpose**: Execute implementation
 - **Input**: Plan path
 - **Output**: Completed implementation
@@ -294,23 +294,23 @@ your-repo/
 
 The framework supports saving and resuming work through persistent documentation:
 
-### `/5_save_progress`
+### `/save_progress`
 - **Purpose**: Save work progress and context
 - **Input**: Current work state
 - **Output**: Session summary and checkpoint
 - **Creates**: `thoughts/shared/sessions/` document
 
-### `/6_resume_work`
+### `/resume_work`
 - **Purpose**: Resume previously saved work
 - **Input**: Session summary path or auto-discover
 - **Output**: Restored context and continuation
 - **Reads**: Session, plan, and research documents
 
-### Saving Progress (`/5_save_progress`)
+### Saving Progress (`/save_progress`)
 
 When you need to pause work:
 ```
-/5_save_progress
+/save_progress
 > Need to stop working on the payment feature
 
 # Creates:
@@ -319,11 +319,11 @@ When you need to pause work:
 - Work status documentation
 ```
 
-### Resuming Work (`/6_resume_work`)
+### Resuming Work (`/resume_work`)
 
 To continue where you left off:
 ```
-/6_resume_work
+/resume_work
 > thoughts/shared/sessions/2025-01-06_payment_feature.md
 
 # Restores:
@@ -353,13 +353,13 @@ Session summaries include:
 
 This enables seamless context switching between features or across days/weeks.
 
-### `/7_research_cloud`
+### `/research_cloud`
 - **Purpose**: Analyze cloud infrastructure (READ-ONLY)
 - **Input**: Cloud platform and focus area
 - **Output**: Infrastructure analysis document
 - **Creates**: `thoughts/shared/cloud/` documents
 
-### `/8_define_test_cases`
+### `/define_test_cases`
 - **Purpose**: Design acceptance test cases using DSL approach
 - **Input**: Feature/functionality to test
 - **Output**: Test case definitions in comments + required DSL functions
@@ -525,16 +525,16 @@ Add instructions for your project in your configuration file (CLAUDE.md, CURSOR.
 For complex features, chain commands:
 
 ```
-/1_research_codebase
+/research_codebase
 > Research current auth system
 
-/2_create_plan
+/create_plan
 > Based on research, plan OAuth integration
 
-/4_implement_plan
+/implement_plan
 > thoughts/shared/plans/oauth_integration.md
 
-/3_validate_plan
+/validate_plan
 > Verify OAuth implementation
 
 # Then manually commit using git
@@ -545,7 +545,7 @@ For complex features, chain commands:
 Research multiple aspects simultaneously:
 
 ```
-/1_research_codebase
+/research_codebase
 > How do authentication, authorization, and user management work together?
 ```
 
@@ -556,7 +556,7 @@ This spawns agents to research each aspect in parallel.
 Analyze cloud deployments without making changes:
 
 ```
-/7_research_cloud
+/research_cloud
 > Azure
 > all
 
@@ -573,7 +573,7 @@ Design tests before implementation:
 
 ```
 # Step 1: Define test cases
-/8_define_test_cases
+/define_test_cases
 > Partner enrollment when customer orders a kit product
 
 # Output includes:
@@ -588,15 +588,15 @@ Design tests before implementation:
 # (Copy comment structure to test files, add function calls)
 
 # Step 4: Create plan for feature implementation
-/2_create_plan
+/create_plan
 > Implement partner enrollment logic to make tests pass
 
 # Step 5: Implement the feature
-/4_implement_plan
+/implement_plan
 > thoughts/shared/plans/partner_enrollment.md
 
 # Step 6: Validate tests pass
-/3_validate_plan
+/validate_plan
 ```
 
 **Key Benefit**: Tests are designed with existing patterns in mind, ensuring consistency across the test suite.
