@@ -77,7 +77,7 @@ If working from a plan, update it with:
 # To continue exactly where we left off:
 cd /path/to/repo
 git status
-/4_implement_plan thoughts/shared/plans/feature.md
+/implement_plan thoughts/shared/plans/feature.md
 ```
 ```
 
@@ -171,7 +171,7 @@ To continue this work:
    📋 Plan updated: thoughts/shared/plans/[...]
    💾 Commits created: [list]
 
-   To resume: /6_resume_work thoughts/shared/sessions/[...]
+   To resume: /resume_work thoughts/shared/sessions/[...]
    ```
 
 ## Important Guidelines
@@ -186,6 +186,6 @@ To continue this work:
 ## Integration with Framework
 
 This command works with:
-- `/4_implement_plan` - Updates plan progress
-- `/6_resume_work` - Paired resume command
-- `/3_validate_plan` - Can validate partial progress
+- `/implement_plan` - Updates plan progress
+- `/resume_work` - Paired resume command
+- `/validate_plan` - Can validate partial progress

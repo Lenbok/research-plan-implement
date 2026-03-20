@@ -22,7 +22,7 @@ Invoke this when:
 
 1. **Read session summary** if provided:
    ```
-   /6_resume_work
+   /resume_work
    > thoughts/shared/sessions/2025-01-06_user_management.md
    ```
 
@@ -126,7 +126,7 @@ I'll continue with [specific next action]...
 
 ### Pattern 1: Quick Resume (Same Day)
 ```markdown
-/6_resume_work
+/resume_work
 > Continue the user management feature from this morning
 
 # Claude:
@@ -137,7 +137,7 @@ I'll continue with [specific next action]...
 
 ### Pattern 2: Full Context Restore (Days Later)
 ```markdown
-/6_resume_work
+/resume_work
 > thoughts/shared/sessions/2025-01-03_auth_refactor.md
 
 # Claude:
@@ -150,7 +150,7 @@ I'll continue with [specific next action]...
 
 ### Pattern 3: Investigate and Resume
 ```markdown
-/6_resume_work
+/resume_work
 > What was I working on last week? Find and continue it.
 
 # Claude:
@@ -163,10 +163,10 @@ I'll continue with [specific next action]...
 ## Integration with Framework
 
 This command connects with:
-- `/5_save_progress` - Reads saved progress
-- `/4_implement_plan` - Continues implementation
-- `/1_research_codebase` - Refreshes understanding if needed
-- `/3_validate_plan` - Checks what's been completed
+- `/save_progress` - Reads saved progress
+- `/implement_plan` - Continues implementation
+- `/research_codebase` - Refreshes understanding if needed
+- `/validate_plan` - Checks what's been completed
 
 ## Advanced Features
 
